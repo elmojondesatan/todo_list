@@ -1,4 +1,4 @@
-export function itemTarea(indice, titulo, estado, fechaAsignacion, fechaEntrega, listaIntegrantes) {
+export function itemTarea(indice, titulo, descripcion,estado, fechaAsignacion, fechaEntrega, listaIntegrantes) {
     let divItem = document.createElement('div');
     divItem.className = "item-tarea"; // clase única para todo el componente
 
@@ -11,6 +11,12 @@ export function itemTarea(indice, titulo, estado, fechaAsignacion, fechaEntrega,
     let divTitulo = document.createElement('div');
     divTitulo.className = "tarea-titulo";
     divTitulo.textContent = titulo;
+
+    // Descripción
+    let divDescripcion = document.createElement('div');
+    divDescripcion.className = "tarea-descripcion";
+    divDescripcion.textContent = descripcion;
+
 
     // Estado
     let spanEstado = document.createElement('span');
@@ -51,6 +57,7 @@ export function itemTarea(indice, titulo, estado, fechaAsignacion, fechaEntrega,
     divItem.appendChild(fechaEnt);
     divItem.appendChild(divIntegrantes);
     divItem.appendChild(btnEliminar);
+    divItem.appendChild(divDescripcion);
 
     return divItem;
 }
