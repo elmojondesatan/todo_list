@@ -8,7 +8,7 @@ header {
 }
 
 .div-tareas {
-    display: flex;
+    display: block;
     align-items: center;
     gap: 0.5rem;
     padding: 0.3rem 0.6rem;
