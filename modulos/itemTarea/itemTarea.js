@@ -13,9 +13,9 @@ export function itemTarea(indice, titulo, descripcion,estado, fechaAsignacion, f
     divTitulo.textContent = titulo;
 
     // Descripción
-    let divDescripcion = document.createElement('div');
-    divDescripcion.className = "tarea-descripcion";
-    divDescripcion.textContent = descripcion;
+    //let divDescripcion = document.createElement('div');
+    //divDescripcion.className = "tarea-descripcion";
+    //divDescripcion.textContent = descripcion;
 
 
     // Estado
@@ -57,7 +57,7 @@ export function itemTarea(indice, titulo, descripcion,estado, fechaAsignacion, f
     divItem.appendChild(fechaEnt);
     divItem.appendChild(divIntegrantes);
     divItem.appendChild(btnEliminar);
-    divItem.appendChild(divDescripcion);
+    //divItem.appendChild(divDescripcion);
 
     return divItem;
 }

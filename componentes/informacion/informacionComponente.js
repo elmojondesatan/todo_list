@@ -1,8 +1,10 @@
+import { formularioTarea } from "../formulario/formularioComponente.js";
+
 export function informacion(datos) {
     let divInformacion = document.createElement('div');
     divInformacion.className = "div-info";
 
-    // Div de botones
+    // Botones
     let contenedorBotones = document.createElement('div');
     contenedorBotones.className = "contenedor-botones";
 
@@ -17,26 +19,22 @@ export function informacion(datos) {
     contenedorBotones.appendChild(btnTarea);
     contenedorBotones.appendChild(btnArchivados);
 
-    // Div de información
+    // Tarjeta de información
     let tarjeta = document.createElement('div');
     tarjeta.className = "tarjeta-informacion";
 
-    // Estado
     let estado = document.createElement('span');
     estado.className = "estado";
     estado.textContent = datos.estado;
 
-    // Título
     let titulo = document.createElement('h3');
     titulo.className = "titulo-tarea";
     titulo.textContent = datos.titulo;
 
-    // Descripción
     let descripcion = document.createElement('p');
     descripcion.className = "descripcion-tarea";
     descripcion.textContent = datos.descripcion;
 
-    // Integrantes
     let textoIntegrantes = document.createElement('p');
     textoIntegrantes.textContent = "Integrantes";
 
@@ -44,20 +42,28 @@ export function informacion(datos) {
     contenedorIntegrantes.className = "contenedor-integrantes";
 
     datos.integrantes.forEach(integrante => {
-        let spanEmoji = document.createElement('span');
-        spanEmoji.className = "emoji-integrante";
-        spanEmoji.textContent = integrante;
-        contenedorIntegrantes.appendChild(spanEmoji);
+        let span = document.createElement('span');
+        span.className = "emoji-integrante";
+        span.textContent = integrante;
+        contenedorIntegrantes.appendChild(span);
     });
 
-    // Añadir todo a la tarjeta
+    // Agregar formulario oculto
+    let formulario = formularioTarea();
+    formulario.style.display = "none";
+    tarjeta.appendChild(formulario);
+
+    btnTarea.addEventListener('click', () => {
+        formulario.style.display = formulario.style.display === "none" ? "block" : "none";
+    });
+
+    // Armar estructura
     tarjeta.appendChild(estado);
     tarjeta.appendChild(titulo);
     tarjeta.appendChild(descripcion);
     tarjeta.appendChild(textoIntegrantes);
     tarjeta.appendChild(contenedorIntegrantes);
 
-    // Añadir al contenedor principal
     divInformacion.appendChild(contenedorBotones);
     divInformacion.appendChild(tarjeta);
 
