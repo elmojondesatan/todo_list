@@ -10,4 +10,43 @@
 .seccion-1{
     display: grid;
     grid-template-columns: 75% 25%;
+ 
 }
+
+
+@media(max-width: 400px) {
+    .seccion-1 {
+        grid-template-columns: auto;
+    }
+}
+
+/* Teléfonos pequeños (en modo vertical) */
+@media (max-width: 480px) {
+    /* Estilos para teléfonos pequeños */
+  }
+  
+  /* Teléfonos grandes y móviles en general */
+  @media (max-width: 600px) {
+    /* Estilos para la mayoría de los smartphones */
+  }
+  
+  /* Tablets en modo vertical y móviles grandes */
+  @media (max-width: 768px) {
+    /* Estilos para tablets verticales */
+  }
+  
+  /* Tablets en modo horizontal */
+  @media (max-width: 992px) {
+    /* Estilos para tablets horizontales y pantallas pequeñas */
+  }
+  
+  /* Laptops pequeñas o pantallas medianas */
+  @media (max-width: 1200px) {
+    /* Estilos para laptops pequeños */
+  }
+  
+  /* Monitores grandes o pantallas anchas */
+  @media (max-width: 1400px) {
+    /* Estilos para pantallas grandes */
+  }
+  
