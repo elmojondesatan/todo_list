@@ -7,7 +7,12 @@ export function tareas(tareasDb) {
     divtareas.className = "div-tareas";
 
     tareasDb.forEach((e) => {
-        let tarea = itemTarea(e.indice, e.titulo,e.descripcion, e.estado, e.fechaAsignacion, e.fechaEntrega, e.integrantes);
+        let tarea = itemTarea(
+            1, 
+            e.nombre,
+            e.estado_tarea, 
+            e.fecha_asignada, 
+            e.fecha_entrega, []);
         divtareas.appendChild(tarea);
     });
 

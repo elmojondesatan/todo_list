@@ -1,4 +1,4 @@
-export function itemTarea(indice, titulo, descripcion,estado, fechaAsignacion, fechaEntrega, listaIntegrantes) {
+export function itemTarea(indice, titulo,estado, fechaAsignacion, fechaEntrega, listaIntegrantes) {
     let divItem = document.createElement('div');
     divItem.className = "item-tarea"; // clase única para todo el componente
 

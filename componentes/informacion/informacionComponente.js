@@ -25,11 +25,11 @@ export function informacion(datos) {
 
     let estado = document.createElement('span');
     estado.className = "estado";
-    estado.textContent = datos.estado;
+    estado.textContent = datos.estado_tarea;
 
     let titulo = document.createElement('h3');
     titulo.className = "titulo-tarea";
-    titulo.textContent = datos.titulo;
+    titulo.textContent = datos.nombre;
 
     let descripcion = document.createElement('p');
     descripcion.className = "descripcion-tarea";
@@ -41,12 +41,13 @@ export function informacion(datos) {
     let contenedorIntegrantes = document.createElement('div');
     contenedorIntegrantes.className = "contenedor-integrantes";
 
-    datos.integrantes.forEach(integrante => {
+    /*datos.integrantes.forEach(integrante => {
         let span = document.createElement('span');
         span.className = "emoji-integrante";
         span.textContent = integrante;
         contenedorIntegrantes.appendChild(span);
     });
+    */
 
     // Agregar formulario oculto
     let formulario = formularioTarea();
