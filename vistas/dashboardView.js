@@ -8,7 +8,7 @@ export async function dashboard() {
 
     try {
 
-        const resultado = await fetch("https://backend-todo-list-4w47.onrender.com");
+        const resultado = await fetch("https://backend-todo-list-4w47.onrender.com/tareas");
         const datos = await resultado.json();
         let tareasDb = datos;
         console.log(tareasDb);
